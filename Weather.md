@@ -76,6 +76,16 @@ $$Q = \frac{2 \pi n}{365}$$
 
 [2]王炳忠,刘庚山.日射观测中常用天文参数的再计算[J].太阳能学报,1991(01):27-32.
 
-## 雨雪等天气系统
-
 ## 日出与日落
+
+原理：
+
+通过ue实验性功能sunpostion实现，开启插件功能Sun Position Calculator
+
+在 Engine/Plugins/Runtime/SunPosition/Content 中找到BP_SunPosition,引入场景中BP_SUnPosition自动关联场景中的Sky Sphere，通过调整参数来实现对场景光源的控制
+
+实现：
+
+1. 开启插件功能Sun Position Calculator
+2. 引入BP_SunPosition进入场景
+3. 通过数字孪生系统，获取指定/当期位置的地理信息，调整BP_SunPosition参数，实现实时天空的控制
